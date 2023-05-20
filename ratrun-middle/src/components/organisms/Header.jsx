@@ -2,14 +2,13 @@ import React from "react";
 import "../../assets/main.scss"
 
 const Header = () => {
+  const menuItems = ["ホーム","経営理念","事業理念","事業目的","お問い合わせ"]
   return (
     <header>
       <ul>
-        <li>ホーム</li>
-        <li>経営理念</li>
-        <li>事業理念</li>
-        <li>事業目的</li>
-        <li>お問い合わせ</li>
+        {menuItems.map((item,index) => {
+          return <li key={index}>{item}</li>
+        })}
       </ul>
       <div>
         <h2 className="header--title" >理念の文章が入ります</h2>
