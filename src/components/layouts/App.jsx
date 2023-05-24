@@ -1,6 +1,6 @@
 import Header from "../organisms/Header";
 
-function App() {
+const App = () => {
   return (
     <div>
       <Header />
