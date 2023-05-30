@@ -1,8 +1,8 @@
 import "../../assets/main.scss";
 import logo from "../../assets/logo.png";
-import facebook from "../../assets/facebook.svg"
-import instagram from "../../assets/instagram.svg"
-import pinterest from "../../assets/pinterest.svg"
+import facebook from "../../assets/facebook.svg";
+import instagram from "../../assets/instagram.svg";
+import pinterest from "../../assets/pinterest.svg";
 
 const Footer = () => {
   const footerItems = [
@@ -31,29 +31,35 @@ const Footer = () => {
           })}
         </ul>
         <div className="footer--address">
-          <p>建築・建築デザイン・原状回復・内装解体・建物
-          解体・アスベスト除去工事はSENTIAにお任せください！</p>
+          <p>
+            建築・建築デザイン・原状回復・内装解体・建物
+            解体・アスベスト除去工事はSENTIAにお任せください！
+          </p>
           <br />
           <address>
-          <span>株式会社SENTIA</span><br />
-          〒454-0982 <br />
-          愛知県名古屋市高見1-20-2<br />
-          TEL : 052-1212-2029
+            <span>株式会社SENTIA</span>
+            <br />
+            〒454-0982 <br />
+            愛知県名古屋市高見1-20-2
+            <br />
+            TEL : 052-1212-2029
           </address>
         </div>
       </div>
       <div className="footer--icon">
         <a href="#">
-        <img src={facebook} alt="" className="icon"/>
+          <img src={facebook} alt="" className="icon" />
         </a>
         <a href="#">
-        <img src={instagram} alt="" className="icon"/>
+          <img src={instagram} alt="" className="icon" />
         </a>
         <a href="#">
-        <img src={pinterest} alt="" className="icon"/>
+          <img src={pinterest} alt="" className="icon" />
         </a>
       </div>
-      <p className="copy-right">Copyright(c) 店舗設計・デザイン・施工 CYPHER. AllRights Reserved</p>
+      <p className="copy-right">
+        Copyright(c) 店舗設計・デザイン・施工 CYPHER. AllRights Reserved
+      </p>
     </footer>
   );
 };
