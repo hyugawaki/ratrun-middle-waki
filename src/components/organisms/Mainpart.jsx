@@ -1,9 +1,9 @@
 import "../../assets/main.scss";
-import philosophy from "../../assets/philosophy-picture.png";
-import vision from "../../assets/vision-picture.png";
-import mission from "../../assets/mission-picture.png";
-import office from "../../assets/office-picture.png";
-import Accordion from "./Accordion";
+import { philosophy, vision, mission, office } from "../../assets/png";
+import BasicAccordion from "../atoms/Accordion";
+import VisionContent from "../atoms/VisionContent";
+import DesignContent from "../atoms/DesignContent";
+import OfficeImages from "../atoms/OfficeImages";
 
 const FirstContent = () => {
   return (
@@ -94,29 +94,14 @@ const SecondContent = () => {
 };
 
 const ThirdContent = () => {
+  const image = vision;
+  const text =
+    "昨今、情報技術は目まぐるしい勢いで進化を続け、インターネットでは、1日に膨大な量の情報が飛び交っています。インターネットで現代人が1日に触れる情報量は江戸時代の1年分とも言われています。";
   return (
     <div className="vision">
-      <div className="vision-content">
-        <img src={vision} alt="" />
-        <p>
-          昨今、情報技術は目まぐるしい勢いで進化を続け、インターネットでは、1日に膨大な量の情報が飛び交っています。インターネットで現代人が1日に触れる情報量は江戸時代の1年分とも言われています。
-        </p>
-        <button>詳しく見る</button>
-      </div>
-      <div className="vision-content">
-        <img src={vision} alt="" />
-        <p>
-          昨今、情報技術は目まぐるしい勢いで進化を続け、インターネットでは、1日に膨大な量の情報が飛び交っています。インターネットで現代人が1日に触れる情報量は江戸時代の1年分とも言われています。
-        </p>
-        <button>詳しく見る</button>
-      </div>
-      <div className="vision-content">
-        <img src={vision} alt="" />
-        <p>
-          昨今、情報技術は目まぐるしい勢いで進化を続け、インターネットでは、1日に膨大な量の情報が飛び交っています。インターネットで現代人が1日に触れる情報量は江戸時代の1年分とも言われています。
-        </p>
-        <button>詳しく見る</button>
-      </div>
+      {Array.from({ length: 3 }).map((index) => (
+        <VisionContent key={index} image={image} text={text} />
+      ))}
     </div>
   );
 };
@@ -171,51 +156,41 @@ const FourthContent = () => {
 const FifthContent = () => {
   return (
     <div className="info-design">
-      <div className="info-design-content">
-        <img src={vision} alt="" />
-        <div className="info-design-text">
-          <h3>①情報技術</h3>
-          <p>
-            昨今、情報技術は目まぐるしい勢いで進化を続け、インターネットでは、1日に膨大な量の情報が飛び交っています。インターネットで現代人が1日に触れる情報量は江戸時代の1年分とも言われています。
-          </p>
-        </div>
-      </div>
-      <div className="info-design-content">
-        <img src={vision} alt="" />
-        <div className="info-design-text">
-          <h3>②情報技術</h3>
-          <p>
-            昨今、情報技術は目まぐるしい勢いで進化を続け、インターネットでは、1日に膨大な量の情報が飛び交っています。インターネットで現代人が1日に触れる情報量は江戸時代の1年分とも言われています。
-          </p>
-        </div>
-      </div>
-      <div className="info-design-content">
-        <img src={vision} alt="" />
-        <div className="info-design-text">
-          <h3>③情報技術</h3>
-          <p>
-            昨今、情報技術は目まぐるしい勢いで進化を続け、インターネットでは、1日に膨大な量の情報が飛び交っています。インターネットで現代人が1日に触れる情報量は江戸時代の1年分とも言われています。
-          </p>
-        </div>
-      </div>
-      <div className="info-design-content">
-        <img src={vision} alt="" />
-        <div className="info-design-text">
-          <h3>④情報技術</h3>
-          <p>
-            昨今、情報技術は目まぐるしい勢いで進化を続け、インターネットでは、1日に膨大な量の情報が飛び交っています。インターネットで現代人が1日に触れる情報量は江戸時代の1年分とも言われています。
-          </p>
-        </div>
-      </div>
-      <div className="info-design-content">
-        <img src={vision} alt="" />
-        <div className="info-design-text">
-          <h3>⑤情報技術</h3>
-          <p>
-            昨今、情報技術は目まぐるしい勢いで進化を続け、インターネットでは、1日に膨大な量の情報が飛び交っています。インターネットで現代人が1日に触れる情報量は江戸時代の1年分とも言われています。
-          </p>
-        </div>
-      </div>
+      <DesignContent
+        image={vision}
+        number="①"
+        title="情報技術"
+        text="昨今、情報技術は目まぐるしい勢いで進化を続け、インターネットでは、1日に膨大な量の情報が飛び交っています。インターネットで現代人が1日に触れる情報量は江戸時代の1年分とも言われています。
+"
+      />
+      <DesignContent
+        image={vision}
+        number="②"
+        title="情報技術"
+        text="昨今、情報技術は目まぐるしい勢いで進化を続け、インターネットでは、1日に膨大な量の情報が飛び交っています。インターネットで現代人が1日に触れる情報量は江戸時代の1年分とも言われています。
+"
+      />
+      <DesignContent
+        image={vision}
+        number="③"
+        title="情報技術"
+        text="昨今、情報技術は目まぐるしい勢いで進化を続け、インターネットでは、1日に膨大な量の情報が飛び交っています。インターネットで現代人が1日に触れる情報量は江戸時代の1年分とも言われています。
+"
+      />
+      <DesignContent
+        image={vision}
+        number="④"
+        title="情報技術"
+        text="昨今、情報技術は目まぐるしい勢いで進化を続け、インターネットでは、1日に膨大な量の情報が飛び交っています。インターネットで現代人が1日に触れる情報量は江戸時代の1年分とも言われています。
+"
+      />
+      <DesignContent
+        image={vision}
+        number="⑤"
+        title="情報技術"
+        text="昨今、情報技術は目まぐるしい勢いで進化を続け、インターネットでは、1日に膨大な量の情報が飛び交っています。インターネットで現代人が1日に触れる情報量は江戸時代の1年分とも言われています。
+"
+      />
     </div>
   );
 };
@@ -321,19 +296,23 @@ const EighthContent = () => {
 const NinethContent = () => {
   return (
     <div className="office">
-      <img src={office} alt="" className="office-main-img" />
-      <div className="office-img-area">
-        <img src={office} alt="" className="office-sub-img" />
-        <img src={office} alt="" className="office-sub-img" />
-        <img src={office} alt="" className="office-sub-img" />
-      </div>
+      <OfficeImages />
       <p>
         スライドスライドスライドスライドスライドスライドスライド昨今、情報技術は目まぐるしい勢いで進化を続け、インターネットでは、1日に膨大な量の情報が飛び交っています。インターネットで現代人が1日に触れる情報量は江戸時代の1年分とも言われています。
       </p>
       <h3 className="office-title">製作時のポイント</h3>
-      <Accordion />
-      <Accordion />
-      <Accordion />
+      <BasicAccordion
+        accordionBody="アコーディオン展開イメージ昨今、情報技術は目まぐるしい勢いで進化を続け、インターネットでは、1日に膨大な量の情報が飛び交っています。インターネットで現代人が1日に触れる情報量は江戸時代の1年分とも言われています。
+"
+      />
+      <BasicAccordion
+        accordionBody="アコーディオン展開イメージ昨今、情報技術は目まぐるしい勢いで進化を続け、インターネットでは、1日に膨大な量の情報が飛び交っています。インターネットで現代人が1日に触れる情報量は江戸時代の1年分とも言われています。
+"
+      />
+      <BasicAccordion
+        accordionBody="アコーディオン展開イメージ昨今、情報技術は目まぐるしい勢いで進化を続け、インターネットでは、1日に膨大な量の情報が飛び交っています。インターネットで現代人が1日に触れる情報量は江戸時代の1年分とも言われています。
+"
+      />
     </div>
   );
 };
