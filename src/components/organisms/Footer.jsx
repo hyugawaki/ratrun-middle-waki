@@ -1,8 +1,6 @@
 import "../../assets/main.scss";
 import logo from "../../assets/logo.png";
-import facebook from "../../assets/facebook.svg";
-import instagram from "../../assets/instagram.svg";
-import pinterest from "../../assets/pinterest.svg";
+import {facebook, instagram, pinterest} from "../../assets/svg";
 
 const Footer = () => {
   const footerItems = [
